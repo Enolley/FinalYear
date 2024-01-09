@@ -1,0 +1,325 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'crop:index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'crop:prediction' %}">Another Prediction</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Result</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    {% if result == 'rice' %}
+        <div class="container">
+            <h1>The recommended crop is <span style="color: #0BAC56">Rice</span></h1>
+        </div>
+
+    {% elif result == 'maize' %}
+        <div class="container">
+            <h1>The recommended crop is <span style="color: #0BAC56">Maize</span></h1>
+        </div>
+    {% elif result == 'jute' %}
+        <div class="container">
+            <h1>The recommended crop is <span style="color: #0BAC56">Jute</span></h1>
+        </div>
+    {% elif result == 'cotton' %}
+        <div class="container">
+            <h1>The recommended crop is <span style="color: #0BAC56">Cotton</span></h1>
+        </div>
+    {% elif result == 'coconut' %}
+        <div class="container">
+            <h1>The recommended crop is <span style="color: #0BAC56">Coconut</span></h1>
+        </div>
+    {% elif result == 'papaya' %}
+        <div class="container">
+            <h1>The recommended crop is <span style="color: #0BAC56">Papaya</span></h1>
+        </div>
+    {% elif result == 'orange' %}
+        <div class="container">
+            <h1>The recommended crop is <span style="color: #0BAC56">Orange</span></h1>
+             <br>
+            <div class="row">
+                <div class="col">
+                    <img src="{% static 'img/crops/oranges.jpg' %}" alt="" style="width: 100%; height: 530px; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                </div>
+                <div class="col">
+                    <div class="card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding: 20px">
+                        <h2 style="color: #0BAC56">Oranges</h2>
+                        <hr>
+                        <h3>Description</h3>
+                        <hr>
+                        <p><b>Binomial Name &#58;</b> Citrus sinensis </p>
+                        <p><b>Orange Varieties &#58;</b> Valencia and Washington navel (seedless) are the main varieties of oranges in Kenya. </p>
+                        <h3>Overview</h3>
+                        <hr>
+                        <p>It is a small evergreen tree originally domesticated in subtropical Asia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% elif result == 'apple' %}
+        <div class="container">
+            <h1>The recommended crop is <span style="color: #0BAC56">Apple</span></h1>
+            <div class="row">
+                <div class="col">
+                    <img src="{% static 'img/crops/apple.jpg' %}" alt="" style="width: 100%; height: 530px; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                </div>
+                <div class="col">
+                    <div class="card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding: 20px">
+                        <h2 style="color: #0BAC56">Apples</h2>
+                        <hr>
+                        <h3>Description</h3>
+                        <hr>
+                        <p><b>Binomial Name &#58;</b> Pyrus malus </p>
+                        <p><b>Apple Varieties &#58;</b> Red Delicious, Golden Delicious, Granny Smith, McIntosh, Rome Beauty, Fuji, Jonathan, York, Gala, Idared </p>
+                        <h3>Overview</h3>
+                        <hr>
+                        <p>An apple is a round, edible fruit produced by an apple tree Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    {% elif result == 'muskmelon' %}
+        <div class="container">
+            <h1>The recommended crop is <span style="color: #0BAC56">Muskmelon</span></h1>
+            <br>
+            <div class="row">
+                    <div class="col">
+                        <img src="{% static 'img/crops/muskmelon.jpg' %}" alt="" style="width: 100%; height: 530px; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    </div>
+                    <div class="col">
+                        <div class="card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding: 20px">
+                            <h2 style="color: #0BAC56">Musk melon</h2>
+                            <hr>
+                            <h3>Description</h3>
+                            <hr>
+                            <p><b>Binomial Name &#58;</b>  Cucumis melo </p>
+                            <p><b>Coffee Varieties &#58;</b>Muskmelon, rock melon, sweet melon, honeydew, Persian melon</p>
+                            <h3>Overview</h3>
+                            <hr>
+                            <p>The fruit is a pepo. The flesh is either sweet or bland, with or without a musky aroma, and the rind can be smooth, ribbed, wrinkled, or netted</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    {% elif result == 'watermelon' %}
+        <div class="container">
+            <h1>The recommended crop is <span style="color: #0BAC56">Watermelon</span></h1>
+        </div>
+    {% elif result == 'grapes' %}
+        <div class="container">
+            <h1>The recommended crop is <span style="color: #0BAC56">Grapes</span></h1>
+            <br>
+                <div class="row">
+                    <div class="col">
+                        <img src="{% static 'img/crops/grapes.jpg' %}" alt="" style="width: 100%; height: 530px; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    </div>
+                    <div class="col">
+                        <div class="card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding: 20px">
+                            <h2 style="color: #0BAC56">Grapes</h2>
+                            <hr>
+                            <h3>Description</h3>
+                            <hr>
+                            <p><b>Binomial Name &#58;</b> Vitis vinifera </p>
+                            <p><b>Grape Varieties &#58;</b> Concord, Moon Drop, Cotton Candy, Crimson</p>
+                            <h3>Overview</h3>
+                            <hr>
+                            <p>Grapes contain powerful antioxidants known as polyphenols. These are thought to have anti-inflammatory and antioxidant properties.</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    {% elif result == 'mango' %}
+        <div class="container">
+            <h1>The recommended crop is <span style="color: #0BAC56">Mango</span></h1>
+        </div>
+    {% elif result == 'banana' %}
+        <div class="container">
+            <h1>The recommended crop is <span style="color: #0BAC56">Banana</span></h1>
+        </div>
+    {% elif result == 'pomegranate' %}
+        <div class="container">
+            <h1>The recommended crop is <span style="color: #0BAC56">Pomegranate</span></h1>
+        </div>
+    {% elif result == 'lentil' %}
+        <div class="container">
+            <h1>The recommended crop is <span style="color: #0BAC56">Lentils</span></h1>
+        </div>
+    {% elif result == 'blackgram' %}
+        <div class="container">
+            <h1>The recommended crop is <span style="color: #0BAC56">Black gram</span></h1>
+        </div>
+    {% elif result == 'mungbean' %}
+        <div class="container">
+            <h1>The recommended crop is <span style="color: #0BAC56">Mung Bean</span></h1>
+        </div>
+    {% elif result == 'mothbeans' %}
+        <div class="container">
+            <h1>The recommended crop is <span style="color: #0BAC56">Moth Beans</span></h1>
+        </div>
+    {% elif result == 'pigeonpeas' %}
+        <div class="container">
+            <h1>The recommended crop is <span style="color: #0BAC56">Pigeon Peas</span></h1>
+        </div>
+    {% elif result == 'kidneybeans' %}
+        <div class="container py-4">
+            <h1>The recommended crop is <span style="color: #0BAC56">Kidney Beans</span></h1>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <img src="{% static 'img/crops/kidneybeans.jpg' %}" alt="" style="width: 100%; height: 530px; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                </div>
+                <div class="col">
+                    <div class="card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding: 20px">
+                        <h2 style="color: #0BAC56">Kidney Beans</h2>
+                        <hr>
+                        <h3>Description</h3>
+                        <hr>
+                        <p><b>Binomial Name &#58;</b> Phaseolus vulgaris </p>
+                        <p><b>Bean Varieties &#58;</b> Black, Black-eyed Pea, Black Turtle, Broad, Butter, Chickpea, Cowpea, Dark Red Kidney, Fava, Garbanzo, Great Northern White, Green, Kidney, Lima, Navy, Pinto, Red, Red Kidney, String, White</p>
+                        <h3>Overview</h3>
+                        <hr>
+                        <p>The large dark red Kidney bean is commonly used in soups other baked dishes. They are sometimes called ‘chili beans’ for their inclusion in this popular thick soup.  Native to Mexico, they require around 95 days from germination to harvest.  Red Kidney beans are typically harvested at complete maturity as dry beans.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row py-5">
+                <div class="col" >
+                    <div class="card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding: 20px; color: #ffffff; background-color: #0BAC56">
+                        <h3>Growing Notes</h3>
+                        <hr>
+                        <ul>
+                            <li>Beans generally do not respond well to transplanting, and are usually direct sown around or just after the last spring frost.</li>
+                            <li>The most important point about growing beans is not to plant them too early. They will rot in cool, damp soil.</li>
+                            <li>Even so, many beans require a long growing season of 80 days or more.</li>
+                            <li>To get an earlier start, you can put down black plastic, to warm the soil.</li>
+                            <li>Most beans should be sown with the eye of the been facing downward, 1-2" deep, approximately 4-6" apart, with 24" or more between rows.</li>
+                            <li>The ideal site will be sunny, well-drained, moderately fertile, and slightly acidic (pH 6.0-7.0).</li>
+                            <li>Additionally, bean plants should be well-ventilated to promote proper development and deter mildew or mold that can trouble plants.</li>
+                            <li>Beans should not be grown in the same spot more than once every four years, and can be mutually beneficial with corn, strawberries and cucumber.</li>
+                            <li>Avoid planting beans near onion or fennel. Plant bush beans in either rows or blocks, with 4-6 inches between each seed.</li>
+                            <li>Plant the seeds 1-2 inches deep and be sure to water the soil immediately and regularly, until it sprouts.</li>
+                            <li>Pole beans will need some type of support to grow on. Be sure the trellis, teepee, fence or whatever is in place before you seed.</li>
+                            <li>Plant seeds at a rate of about 3-6 seeds per teepee or every 6 inches apart.</li>
+                        </ul>
+                    </div>
+            </div>
+            <div class="row py-5">
+                <div class="col">
+                    <div class="card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding: 20px">
+                        <h3>Maintenance</h3>
+                        <hr>
+                        <ul>
+                            <li>When watering, try to avoid getting the leaves wet as this can promote fungus or other damaging conditions that beans can be susceptible to. </li>
+                            <li>Most types of beans are somewhat drought resistant, but check the surface of the soil frequently and water when the top layer has become dried out.</li>
+                            <li>Once established, beans generally will not require fertilizing and will generate their own nitrogen. </li>
+                            <li>However, if the leaves of young plants are pale this is an indication of nitrogen deficiency and starts can be fertilized with with fish emulsion or other natural nitrogen rich fertilizer.</li>
+                            <li>Bush beans begin producing before pole beans and often come in all at once.</li>
+                            <li>Staggered planting, every 2 weeks, will keep your bush beans going longer. </li>
+                            <li>Pole beans need time to grow their vines, before they start setting beans.</li>
+                            <li>The pole bean crop will continue to produce for a month or two.</li>
+                            <li>Pole beans may need some initial help in climbing. Keep the bean plants well watered.</li>
+                            <li>Mulch helps keep their shallow roots moist. </li>
+                            <li>Long producing pole beans will benefit from a feeding or a side dressing of compost or manure about half way through their growing season.</li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="{% static 'img/crops/grow.jpg' %}" alt="" style="width: 100%; height: 700px; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                </div>
+            </div>
+            <div class="row py-5">
+                <div class="col">
+                    <div class="card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding: 20px; color: #ffffff; background-color: #0BAC56">
+                       <h3>Harvesting</h3>
+                        <hr>
+                        <p>
+                            Harvesting beans is an ongoing process.
+                            You can start to harvest anytime, but gardeners usually wait until the beans begin to firm up and can be snapped.
+                            They are generally about as think as a pencil then. Don't wait too long, because beans can become overgrown and tough almost overnight.
+                            Harvest by gently pulling each bean from the vine or by snapping off the vine end, if you are going to be using the beans right away.
+                            Depending on whether the bean is a snap, shell, or dry variety will impact when and how the bean should be harvested.
+                        </p>
+                        <br>
+                        <h4>Snap Beans</h4>
+                        <hr>
+                        <ul>
+                            <li>Snap beans are harvested while the pod and enclosed seeds are still relatively immature.</li>
+                            <li>Compared to the other two types of beans, snap beans have the smallest window for an ideal crop.</li>
+                            <li>Beans that are harvested too early will not develop the proper flavor and texture. </li>
+                            <li>On the other hand, beans that are allowed to develop on the plant too long will be tough and somewhat unpalatable. </li>
+                            <li>Perhaps the best simple indicator for snap beans is the diameter of the pods. </li>
+                            <li>Generally, most varieties will yield the best snap beans with a diameter between ⅛-1/4". </li>
+                            <li>Maybe the best way to determine suitability for harvest is to sample a pod or two before making a complete harvest.</li>
+                            <li>It is worth noting that many varieties of snap beans that are allowed to develop completely also make good dry beans.</li>
+                        </ul>
+                        <br>
+                        <h4>Shell Beans</h4>
+                        <hr>
+                        <ul>
+                            <li>Shell beans are harvested at a later time than snap beans, once the pods have started to fill out and the enclosed seeds developing inside are apparent. </li>
+                            <li>Beans of such varieties are removed from pods and are often eaten fresh, but are sometimes dried.</li>
+                        </ul>
+                        <h4>Dry Beans</h4>
+                        <hr>
+                        <ul>
+                            <li>Dry beans are not harvested until the pods and enclosed seeds have reached complete maturity, and will often require threshing to remove extraneous pod material.</li>
+                            <li>When growing dry beans, it is especially important that growing plants have plenty of space and ventilation so that pods will dry out. </li>
+                            <li>If experiencing a spell of rain late in the season once pods have matured, plants can be removed from ground and hung upside down indoors to allow dessication to continue.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% elif result == 'chickpea' %}
+        <h1>The recommended crop is <span style="color: #0BAC56">Chickpea</span></h1>
+    {% elif result == 'coffee' %}
+        <div class="container py-4">
+            <h1>The recommended crop is <span style="color: #0BAC56">Coffee</span></h1>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <img src="{% static 'img/crops/coffee.jpg' %}" alt="" style="width: 100%; height: 530px; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                </div>
+                <div class="col">
+                    <div class="card" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; padding: 20px">
+                        <h2 style="color: #0BAC56">Coffee</h2>
+                        <hr>
+                        <h3>Description</h3>
+                        <hr>
+                        <p><b>Binomial Name &#58;</b>  Coffea </p>
+                        <p><b>Coffee Varieties &#58;</b>Arabica and Robusta</p>
+                        <h3>Overview</h3>
+                        <hr>
+                        <p>Coffea is a genus of flowering plants in the family Rubiaceae. Coffea species are shrubs or small trees native to tropical and southern Africa and tropical Asia. The seeds of some species, called coffee beans, are used to flavor various beverages and products.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <h1>Sorry, but there are no recommendations for this area.</h1>
+    {% endif %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
